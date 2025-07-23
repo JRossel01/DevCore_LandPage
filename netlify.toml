@@ -1,0 +1,5 @@
+[build]
+  # Si tus HTML están en la raíz
+  publish = "."
+  # Carpeta de funciones serverless
+  functions = "netlify/functions"

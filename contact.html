@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contáctanos - DevCore</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="has-animations">
+  <div class="body-wrap">
+
+    <!-- HEADER -->
+    <header class="site-header invert-color">
+      <div class="container">
+        <div class="site-header-inner">
+          <div class="brand">
+            <h1 class="m-0">
+              <a href="index.html"><img src="images/logo.svg" alt="DevCore" width="32" height="32"></a>
+            </h1>
+          </div>
+          <button id="header-nav-toggle" class="header-nav-toggle" aria-controls="primary-menu" aria-expanded="false">
+            <span class="screen-reader">Menu</span>
+            <span class="hamburger"><span class="hamburger-inner"></span></span>
+          </button>
+          <nav id="header-nav" class="header-nav">
+            <div class="header-nav-inner">
+              <ul class="list-reset text-xs header-nav-right">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="additional.html">Conócenos</a></li>
+                <li class="current"><a href="contact.html">Contáctanos</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="section has-bg-color invert-color center-content">
+      <div class="container">
+        <div class="section-header">
+          <h1 class="mt-0 mb-16">Contáctanos</h1>
+          <p class="m-0">¿Tienes dudas o quieres una demo? Estamos para ayudarte.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT INFO -->
+    <section class="section center-content">
+      <div class="container">
+        <div class="tiles-wrap">
+          <div class="tiles-item reveal-from-bottom">
+            <div class="tiles-item-inner">
+              <div class="tiles-item-content text-sm">
+                <h4 class="mt-0 mb-8">Teléfono</h4>
+                <p class="m-0">+591 71670504</p>
+              </div>
+            </div>
+          </div>
+          <div class="tiles-item reveal-from-bottom" data-reveal-delay="100">
+            <div class="tiles-item-inner">
+              <div class="tiles-item-content text-sm">
+                <h4 class="mt-0 mb-8">Correo Electrónico</h4>
+                <p class="m-0">devCoreContact01@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="tiles-item reveal-from-bottom" data-reveal-delay="200">
+            <div class="tiles-item-inner">
+              <div class="tiles-item-content text-sm">
+                <h4 class="mt-0 mb-8">Dirección</h4>
+                <p class="m-0">Av. La Paz 1234, Santa Cruz, Bolivia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NETLIFY FORM -->
+    <section class="section has-top-divider">
+      <div class="container">
+        <div class="section-inner">
+          <div class="container-xs">
+            <h2 class="mt-0 mb-16">Escríbenos</h2>
+            <form name="contacto"
+                  id="contact-form"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  class="form"
+                  style="max-width:600px; margin:0 auto;">
+              <input type="hidden" name="form-name" value="contacto">
+              <p class="screen-reader">
+                <label>Si eres humano, deja esto en blanco: <input name="bot-field"></label>
+              </p>
+
+              <div class="mb-16">
+                <label for="name" class="form-label screen-reader">Nombre</label>
+                <input id="name"
+                       name="name"
+                       class="form-input"
+                       type="text"
+                       placeholder="Tu nombre"
+                       required>
+              </div>
+              <div class="mb-16">
+                <label for="email" class="form-label screen-reader">Correo</label>
+                <input id="email"
+                       name="email"
+                       class="form-input"
+                       type="email"
+                       placeholder="Tu correo electrónico"
+                       required>
+              </div>
+              <div class="mb-16">
+                <label for="message" class="form-label screen-reader">Mensaje</label>
+                <textarea id="message"
+                          name="message"
+                          class="form-input"
+                          placeholder="Tu mensaje..."
+                          rows="4"
+                          required></textarea>
+              </div>
+              <div class="button-group center-content">
+                <button type="submit" class="button button-primary">Enviar Mensaje</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHATBOT WIDGET -->
+    <section class="section has-top-divider">
+      <div class="container">
+        <div class="section-header center-content">
+          <h2 class="mt-0 mb-16">Chatea con DevCoreBot</h2>
+          <p class="m-0">Responde consultas al instante sobre nuestros servicios.</p>
+        </div>
+        <div id="chat-container"
+             class="chat-container"
+             style="max-width:600px; margin:2rem auto;">
+          <div id="chat-log"
+               class="chat-log"
+               style="height:300px; overflow-y:auto; padding:1rem; background:#f9f9f9; border:1px solid #ccc; border-radius:4px;">
+            <!-- Mensaje inicial de bienvenida -->
+            <div style="margin-bottom:.5rem;"><strong>DevCoreBot:</strong> ¡Hola! Soy DevCoreBot, ¿en qué puedo ayudarte hoy?</div>
+          </div>
+          <form id="chat-form"
+                class="chat-form"
+                style="display:flex; margin-top:1rem;">
+            <input type="text"
+                   id="chat-input"
+                   placeholder="Escribe tu pregunta..."
+                   autocomplete="off"
+                   class="form-input"
+                   style="flex:1; padding:.5rem; border:1px solid #ddd; border-radius:4px 0 0 4px;">
+            <button type="submit"
+                    class="button button-primary"
+                    style="border-radius:0 4px 4px 0;">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer invert-color">
+      <div class="container">
+        <div class="site-footer-inner">
+          <div class="footer-top space-between text-xxs">
+            <div class="brand"><a href="index.html"><img src="images/logo.svg" alt="DevCore" width="32" height="32"></a></div>
+            <div class="footer-social">
+              <ul class="list-reset">
+                <li><a href="#"><!-- Facebook --></a></li>
+                <li><a href="#"><!-- Twitter --></a></li>
+                <li><a href="#"><!-- LinkedIn --></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom space-between text-xxs invert-order-desktop">
+            <nav class="footer-nav">
+              <ul class="list-reset">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="additional.html">Conócenos</a></li>
+                <li class="current"><a href="contact.html">Contáctanos</a></li>
+              </ul>
+            </nav>
+            <div>&copy; 2025 DevCore, todos los derechos reservados</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- MAIN JS (reveal, animaciones, nav toggle) -->
+  <script src="js/main.min.js"></script>
+
+  <!-- CHATBOT SCRIPT -->
+  <script>
+    (() => {
+      const form = document.getElementById("chat-form");
+      const input = document.getElementById("chat-input");
+      const log   = document.getElementById("chat-log");
+      let history = [];
+
+      function appendMessage(who, text) {
+        const msg = document.createElement("div");
+        msg.style.margin = "0.5rem 0";
+        msg.innerHTML = `<strong>${who}:</strong> ${text}`;
+        log.appendChild(msg);
+        log.scrollTop = log.scrollHeight;
+      }
+
+      form.addEventListener("submit", async e => {
+        e.preventDefault();
+        const msg = input.value.trim();
+        if (!msg) return;
+        appendMessage("Tú", msg);
+        input.value = "";
+        try {
+          const res = await fetch("/.netlify/functions/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: msg, history })
+          });
+          const { reply } = await res.json();
+          appendMessage("DevCoreBot", reply);
+          history.push({ role: "user",    content: msg   });
+          history.push({ role: "assistant", content: reply });
+        } catch (err) {
+          appendMessage("Error", "No pude conectar con el servidor.");
+          console.error(err);
+        }
+      });
+    })();
+  </script>
+</body>
+
+</html>
